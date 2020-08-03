@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html class="text-center">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Horse Or Human</title>
+    <meta property="og:image" content="static/img/mountain_bg.jpg">
+    <meta property="og:type" content="website">
+    <link rel="stylesheet" href="static/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bitter:400,700">
+    <link rel="stylesheet" href="static/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="static/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="static/css/Button-Modal-popup-team-member-1.css">
+    <link rel="stylesheet" href="static/css/Button-Modal-popup-team-member.css">
+    <link rel="stylesheet" href="static/css/Footer-Dark.css">
+    <link rel="stylesheet" href="static/css/Header-Dark.css">
+    <link rel="stylesheet" href="static/css/Popup-Element-Overlay-1.css">
+    <link rel="stylesheet" href="static/css/Popup-Element-Overlay.css">
+    <link rel="stylesheet" href="static/css/styles.css">
+</head>
+
+<body>
+    <div class="text-center">
+        <div class="header-dark">
+            <nav class="navbar navbar-dark navbar-expand-lg navigation-clean-search">
+                <div class="container"><a class="navbar-brand text-center" href="/">Horse or Human!!</a><button class="navbar-toggler" data-toggle="collapse"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button></div>
+            </nav>
+            <div class="container hero">
+                <div class="row">
+                    <div class="col-md-8 offset-md-2">
+                        <h1 class="text-center">Upload image here.</h1>
+                    </div>
+                </div>
+            </div>
+            <form action = "/uploader" method = "POST" enctype = "multipart/form-data">
+                <input type="file" name="file" style="background-color: #f0f0f0;">
+                <button class="btn btn-primary" type="submit" style="background-color: #282d32;height: 40px;padding: 7px;margin: 7px;">Upload</button>
+            </form>
+                <img class="img-thumbnail" width="420" height="420"
+                src="static/uploaded_images/{{uploaded_image}}" style="height: 423px;width: 640px;">
+            <div class="container hero">
+                <h2 class="text-center" style="color: #ffffff;">{{classification}}</h2>
+            </div>
+            <form action = "/classify" method = "POST">
+                <button class="btn btn-primary" type="submit" style="background-color: #343434;padding: 7px;margin: 18px;">Classify</button>
+            </form>
+            <div class="btn-group" role="group"></div>
+        </div>
+    </div>
+    <div class="footer-dark" style="margin: 0px;">
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3>Services</h3>
+                        <ul>
+                            <li><a href="#">Web design</a></li>
+                            <li><a href="#">Development</a></li>
+                            <li><a href="#">Hosting</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3>About</h3>
+                        <ul>
+                            <li><a href="#">Company</a></li>
+                            <li><a href="#">Team</a></li>
+                            <li><a href="#">Careers</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6 item text">
+                        <h3>Company Name</h3>
+                        <p>Praesent sed lobortis mi. Suspendisse vel placerat ligula. Vivamus ac sem lacus. Ut vehicula rhoncus elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum vel in justo.</p>
+                    </div>
+                    <div class="col item social"><a href="https://github.com/debjyotiC"><i class="icon ion-social-github"></i></a><a href="https://www.linkedin.com/in/debjyoti-chowdhury-47005776/"><i class="icon ion-social-linkedin"></i></a></div>
+                </div>
+                <p class="copyright">Debjyoti Chowdhury © 2020</p>
+            </div>
+        </footer>
+    </div>
+    <script src="static/js/jquery.min.js"></script>
+    <script src="static/bootstrap/js/bootstrap.min.js"></script>
+    <script src="static/js/Button-Modal-popup-team-member.js"></script>
+    <script src="static/js/Popup-Element-Overlay.js"></script>
+</body>
+
+</html>
